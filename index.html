@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niko Go</title>
+  <link rel="icon" type="image/x-icon" href="Logos/Logo.webp">
+  <link rel="stylesheet" href="homepagestyle.css">
+</head>
+
+<body>
+
+  <div class="grain"></div>
+
+<div id="splash-screen">
+        <div class="intro-container">
+            <div class="logo-wrapper">
+                <img src="Logos/Logo.webp" alt="Personal Logo" class="intro-logo">
+            </div>
+        </div>
+    </div>
+  
+<!-- NAVIGATION -->
+
+<nav>
+
+  <!-- LOGO -->
+  <div class="logo"> 
+    <img src="Logos/Logo.webp" alt="Niko's Logo">
+  </div>
+
+  <!-- NAVBAR -->
+  <div class="navigation">
+    <ul>
+      <a id="menuBtn">
+        ☰
+      </a>
+    </ul>
+  </div>
+
+  <!-- POPUP -->
+  <div id="popupMenu" class="popup">
+    <div class="line"></div>
+    <ul>
+      <a href="#" id="homeBtn" class="button">home</a>
+      <a href="#about" id="aboutBtn" class="button">about</a>
+      <a href="#portfolio" class="button">portfolio</a>
+    </ul>
+  </div>
+
+</nav>
+
+<!-- LANDING -->
+<section class="landing">
+  <p>2026</p>
+  <h1>Inside the mind of a <span id="cycle-word">designer</span></h1>
+  <p> Niko Go's Design Portfolio</p>
+  </section>
+
+<!-- ABOUT ME -->
+<section class="about-me" id="about">
+  <h1 class="name" id="nameText">Hello, I'm Niko!</h1>
+  <h1 class="from" id="fromText">Based in the Philippines</h1>
+  <p id="aboutText">A graphic designer based in the Philippines. I create visually compelling designs that combine creativity with clear
+  communication, focusing on layouts, branding, and digital visuals that leave a lasting impression.</p>
+
+  <div class="socials">
+    <p class="socialtext">designernikogo@gmail.com</p>
+    <p class="socialtext">+63 905 365 5921</p>
+  </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+  <main id="portfolio"class="portfolio-container">
+    <div class="grid">
+
+      <div class="grid-item"
+        data-title="Limitless Collection"
+        data-description="A streetwear-inspired merch collection focused on bold typography and expressive visuals.">
+        <img src="Projects/1 Cover.webp" alt="Limitless Collection">
+
+        <div class="item-overlay">
+          <span>Merch Design</span>
+          <h3>Limitless Collection</h3>
+        </div>
+      </div>
+  
+      <div class="grid-item"
+      data-title="CCS Month"
+      data-description="A cohesive event branding system designed for CCS Month, combining bold typography and vibrant visual elements to capture student energy and community spirit across digital and print materials.">
+        <img src="Projects/CCS MONTH HEADER.webp" alt="CCS Month">
+
+        <div class="item-overlay">
+          <span>Event Branding</span>
+          <h3>CCS Month</h3>
+        </div>
+      </div>
+
+      <div class="grid-item"
+      data-title="It Only Gets Better!"
+      data-description="A dynamic event poster built around optimism and progression, using layered composition and expressive typography to communicate growth, excitement, and forward momentum.">
+        <img src="Projects/MAIN POSTER.webp" alt="Students' Week">
+      
+        <div class="item-overlay">
+          <span>Event Branding</span>
+          <h3>It Only Gets Better!</h3>
+        </div>
+      </div>
+
+      <div class="grid-item"
+      data-title="Magis Assembly"
+      data-description="A refined branding concept centered on purpose and excellence, utilizing structured layouts and subtle visual hierarchy to reflect the core values of leadership and service.">
+        <img src="Projects/MAGIS ASSEMBLY.webp" alt="Magis Assembly">
+      
+        <div class="item-overlay">
+          <span>Event Branding</span>
+          <h3>Magis Assembly</h3>
+        </div>
+      </div>
+
+      <div class="grid-item"
+      data-title="XU Festival Days 2026"
+      data-description="A large-scale festival identity designed to unify multiple events under one visual system, blending energetic colors and adaptable layouts for maximum versatility across platforms.">
+        <img src="Projects/XUFD.webp" alt="XUFD2026">
+      
+        <div class="item-overlay">
+          <span>Event Branding </span>
+          <h3>XU Festival Days 2026</h3>
+        </div>
+      </div>
+
+      <div class="grid-item"
+      data-title="CSSC GAOT Branding"
+      data-description="A branding project for a formal yet engaging organizational event, balancing professionalism with creative expression through clean visuals and strong typographic direction.">
+        <img src="Projects/GAOT 2.webp" alt="CSSC GAOT">
+      
+        <div class="item-overlay">
+          <span>Event Branding</span>
+          <h3>CSSC GAOT Branding</h3>
+        </div>
+      </div>
+
+      <div class="grid-item"
+      data-title="General Assembly and Organizational Trip"
+      data-description="A visual identity that captures both structure and adventure, merging formal assembly elements with travel-inspired graphics to represent collaboration and shared experiences.">
+        <img src="Projects/GAOT.webp" alt="AECO GAOT">
+      
+        <div class="item-overlay">
+          <span>Event Branding</span>
+          <h3>General Assembly and Organizational Trip</h3>
+        </div>
+      </div>
+
+      <div class="grid-item"
+      data-title="CSG XUFD Branding"
+      data-description="A bold and modern branding execution for student governance, designed to stand out while maintaining clarity and consistency across event materials and digital platforms.">
+        <img src="Projects/CSG LOGO PFP.webp" alt="CSG XUFD">
+      
+        <div class="item-overlay">
+          <span>Event Branding</span>
+          <h3>CSG XUFD Branding</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cursor-dot"></div>
+</main>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+
+    <h2 id="modalTitle">Project Title</h2>
+    <p id="modalDescription">Project description goes here.</p>
+  </div>
+</div>
+
+<script src="homepagescript.js"></script>
+</body>
+
+</html>
