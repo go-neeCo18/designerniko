@@ -1,184 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Niko Go</title>
-  <link rel="icon" type="image/x-icon" href="Logos/Logo.webp">
-  <link rel="stylesheet" href="homepagestyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Niko Go — Graphic Design Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
 </head>
 
 <body>
 
-  <div class="grain"></div>
+  <main class="page">
 
-<div id="splash-screen">
-        <div class="intro-container">
-            <div class="logo-wrapper">
-                <img src="Logos/Logo.webp" alt="Personal Logo" class="intro-logo">
-            </div>
-        </div>
-    </div>
-  
-<!-- NAVIGATION -->
+    <!-- NAV -->
 
-<nav>
+    <header class="topnav">
 
-  <!-- LOGO -->
-  <div class="logo"> 
-    <img src="Logos/Logo.webp" alt="Niko's Logo">
-  </div>
+      <a href="#home" class="brand">Niko Go</a>
 
-  <!-- NAVBAR -->
-  <div class="navigation">
-    <ul>
-      <a id="menuBtn">
+      <button class="menu-toggle" id="menuToggle">
         ☰
-      </a>
-    </ul>
-  </div>
+      </button>
 
-  <!-- POPUP -->
-  <div id="popupMenu" class="popup">
-    <div class="line"></div>
-    <ul>
-      <a href="#" id="homeBtn" class="button">home</a>
-      <a href="#about" id="aboutBtn" class="button">about</a>
-      <a href="#portfolio" class="button">portfolio</a>
-    </ul>
-  </div>
+      <nav class="menu" id="menu">
+        <a class="active" href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-</nav>
+      <button class="theme-toggle" id="themeToggle">
+        🌙
+      </button>
 
-<!-- LANDING -->
-<section class="landing">
-  <p>2026</p>
-  <h1>Inside the mind of a <span id="cycle-word">designer</span></h1>
-  <p> Niko Go's Design Portfolio</p>
-  </section>
+    </header>
 
-<!-- ABOUT ME -->
-<section class="about-me" id="about">
-  <h1 class="name" id="nameText">Hello, I'm Niko!</h1>
-  <h1 class="from" id="fromText">Based in the Philippines</h1>
-  <p id="aboutText">A graphic designer based in the Philippines. I create visually compelling designs that combine creativity with clear
-  communication, focusing on layouts, branding, and digital visuals that leave a lasting impression.</p>
+    <!-- HERO -->
 
-  <div class="socials">
-    <p class="socialtext">designernikogo@gmail.com</p>
-    <p class="socialtext">+63 905 365 5921</p>
-  </div>
+    <section class="hero-grid" id="home">
 
-</section>
+      <article class="hero-copy">
 
+        <span class="eyebrow">
+          Graphic designer & visual storyteller
+        </span>
 
-<!-- PORTFOLIO -->
-  <main id="portfolio"class="portfolio-container">
-    <div class="grid">
+        <h1>
+          Inside the mind of a designer.
+        </h1>
 
-      <div class="grid-item"
-        data-title="Limitless Collection"
-        data-description="A streetwear-inspired merch collection focused on bold typography and expressive visuals.">
-        <img src="Projects/1 Cover.webp" alt="Limitless Collection">
+        <p class="lead">
+          I create visual systems, interfaces, and brand identities
+          that blend strong typography, intentional structure,
+          and modern creative direction.
+        </p>
 
-        <div class="item-overlay">
-          <span>Merch Design</span>
-          <h3>Limitless Collection</h3>
+        <div class="actions">
+          <a href="#projects" class="btn primary">
+            View work
+          </a>
+
+          <a href="#about" class="btn secondary">
+            About me
+          </a>
         </div>
-      </div>
-  
-      <div class="grid-item"
-      data-title="CCS Month"
-      data-description="A cohesive event branding system designed for CCS Month, combining bold typography and vibrant visual elements to capture student energy and community spirit across digital and print materials.">
-        <img src="Projects/CCS MONTH HEADER.webp" alt="CCS Month">
 
-        <div class="item-overlay">
-          <span>Event Branding</span>
-          <h3>CCS Month</h3>
+        <div class="stats">
+
+          <div class="stat">
+            <strong>5+</strong>
+            Event Brandings
+          </div>
+
+          <div class="stat">
+            <strong>90+</strong>
+            Designs Created
+          </div>
+
+          <div class="stat">
+            <strong>6</strong>
+            Years of creative practice
+          </div>
+
         </div>
-      </div>
 
-      <div class="grid-item"
-      data-title="It Only Gets Better!"
-      data-description="A dynamic event poster built around optimism and progression, using layered composition and expressive typography to communicate growth, excitement, and forward momentum.">
-        <img src="Projects/MAIN POSTER.webp" alt="Students' Week">
+      </article>
+
+      <aside class="hero-panel">
+
+        <div>
+          <h2>Studio highlights</h2>
+        </div>
+
+        <p class="lead">
+          Building curated visual identities and
+          polished digital experiences for brands
+          that value clarity and personality.
+        </p>
+
+        <ul class="skill-list">
+          <li>Brand identity systems</li>
+          <li>Brand Design</li>
+          <li>Typography direction</li>
+          <li>Creative campaigns</li>
+        </ul>
+
+        <div class="panel-footer">
+          <span class="tag">Art Direction</span>
+          <span class="tag">Brand Design</span>
+          <span class="tag">Graphic Design</span>
+        </div>
+
+      </aside>
+
+    </section>
+
+    <!-- QUOTE -->
+
+    <section class="quote-block">
+      <p>
+        “Design is not decoration —
+        it is how clarity feels.”
+      </p>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about-grid" id="about">
+
+      <aside class="about-panel card">
+
+        <img src="/IMGs/BG.png" alt="Niko Go" class="about-img" />
+
+        <div class="about-meta">
+          <h3>Niko Go</h3>
+          <p>Graphic Designer — Philippines</p>
+        </div>
+
+      </aside>
       
-        <div class="item-overlay">
-          <span>Event Branding</span>
-          <h3>It Only Gets Better!</h3>
-        </div>
+      <div class="about-copy card">
+
+        <span class="eyebrow">About me</span>
+
+        <h2>Designing with intention, not decoration.</h2>
+
+        <p class="lead">
+          I’m Niko, a graphic designer focused on building strong visual systems,
+          expressive branding, and clean digital experiences.
+          I enjoy turning ideas into structured, meaningful design.
+        </p>
+
+        <p class="lead">
+          My work blends typography, layout, and storytelling to create designs
+          that feel both functional and expressive.
+        </p>
+
       </div>
 
-      <div class="grid-item"
-      data-title="Magis Assembly"
-      data-description="A refined branding concept centered on purpose and excellence, utilizing structured layouts and subtle visual hierarchy to reflect the core values of leadership and service.">
-        <img src="Projects/MAGIS ASSEMBLY.webp" alt="Magis Assembly">
-      
-        <div class="item-overlay">
-          <span>Event Branding</span>
-          <h3>Magis Assembly</h3>
-        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+
+      <div class="section-heading">
+        <h2>Featured Projects</h2>
+
+        <span>
+          Selected to show a range of work.
+        </span>
       </div>
 
-      <div class="grid-item"
-      data-title="XU Festival Days 2026"
-      data-description="A large-scale festival identity designed to unify multiple events under one visual system, blending energetic colors and adaptable layouts for maximum versatility across platforms.">
-        <img src="Projects/XUFD.webp" alt="XUFD2026">
-      
-        <div class="item-overlay">
-          <span>Event Branding </span>
-          <h3>XU Festival Days 2026</h3>
-        </div>
+      <div class="project-list">
+
+        <article class="project-card" onclick="openProject('xavier')">
+
+          <span class="project-number">
+            01
+          </span>
+
+          <div>
+            <h3>The Xavier Cup - 2025</h3>
+
+            <p>
+              A visual identity for Xavier University's annual Intramurals that uses 8-bits aesthetics, pixel art, and a
+              bold color palette to create a fun and energetic brand system.
+            </p>
+          </div>
+
+          <div class="project-tags">
+            <span>Event Branding</span>
+            <span>Pixel Art</span>
+          </div>
+
+        </article>
+
+        <article class="project-card" onclick="openProject('studentweek')">
+
+          <span class="project-number">
+            02
+          </span>
+
+          <div>
+            <h3>It Only Gets Better!</h3>
+
+            <p>
+              Playful brand identity for Xavier University's Students'Week 2026, featuring a vibrant color palette and
+              dynamic typography to create an energetic and inclusive visual system.
+            </p>
+          </div>
+
+          <div class="project-tags">
+            <span>Brand Design</span>
+            <span>Event Branding</span>
+          </div>
+
+        </article>
+
+        <article class="project-card" onclick="openProject('festival')">
+
+          <span class="project-number">
+            03
+          </span>
+
+          <div>
+            <h3>XU Festival Days</h3>
+
+            <p>
+              A branding design for Xavier University's Festival Days, using a vibrant color palette to create an
+              energetic and inclusive visual system that captures the spirit of the event.
+            </p>
+          </div>
+
+          <div class="project-tags">
+            <span>Event Branding</span>
+            <span>Major Project</span>
+          </div>
+
+        </article>
+
       </div>
 
-      <div class="grid-item"
-      data-title="CSSC GAOT Branding"
-      data-description="A branding project for a formal yet engaging organizational event, balancing professionalism with creative expression through clean visuals and strong typographic direction.">
-        <img src="Projects/GAOT 2.webp" alt="CSSC GAOT">
-      
-        <div class="item-overlay">
-          <span>Event Branding</span>
-          <h3>CSSC GAOT Branding</h3>
-        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+      <div class="footer-content">
+
+        <section class="footer-section">
+
+          <h3>
+            Let’s build something memorable.
+          </h3>
+
+          <p>
+            Available for freelance projects,
+            creative collaborations, and visual design work.
+          </p>
+
+          <a href="mailto:designernikogo@gmail.com" class="btn primary">
+            Get in touch
+          </a>
+
+        </section>
+
+        <section class="footer-section">
+
+          <ul class="footer-links">
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        </section>
+
       </div>
 
-      <div class="grid-item"
-      data-title="General Assembly and Organizational Trip"
-      data-description="A visual identity that captures both structure and adventure, merging formal assembly elements with travel-inspired graphics to represent collaboration and shared experiences.">
-        <img src="Projects/GAOT.webp" alt="AECO GAOT">
-      
-        <div class="item-overlay">
-          <span>Event Branding</span>
-          <h3>General Assembly and Organizational Trip</h3>
-        </div>
+      <div class="footer-bottom">
+        <p>© 2026 Niko Go</p>
+        <p>Designed & Developed by Niko Go</p>
       </div>
 
-      <div class="grid-item"
-      data-title="CSG XUFD Branding"
-      data-description="A bold and modern branding execution for student governance, designed to stand out while maintaining clarity and consistency across event materials and digital platforms.">
-        <img src="Projects/CSG LOGO PFP.webp" alt="CSG XUFD">
-      
-        <div class="item-overlay">
-          <span>Event Branding</span>
-          <h3>CSG XUFD Branding</h3>
-        </div>
+    </footer>
+
+    <!-- PROJECT MODAL -->
+
+    <div class="modal" id="modal">
+
+      <div class="modal-content">
+
+        <button class="close" onclick="closeProject()">✕</button>
+
+        <div id="modal-body"></div>
+
       </div>
 
     </div>
 
-    <div class="cursor-dot"></div>
-</main>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+      <img id="lightbox-img" src="" alt="Full view">
+    </div>
+    
+  </main>
 
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal">&times;</span>
+  <script src="script.js"></script>
 
-    <h2 id="modalTitle">Project Title</h2>
-    <p id="modalDescription">Project description goes here.</p>
-  </div>
-</div>
-
-<script src="homepagescript.js"></script>
 </body>
 
 </html>
