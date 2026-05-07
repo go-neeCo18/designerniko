@@ -70,17 +70,16 @@
 
 const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modal-body");
-const BASE = "/designerniko/";
 
 const projects = {
   xavier: {
     title: "The Xavier Cup - 2025",
     desc: "Pixel-based branding system for Xavier University Intramurals.",
     images: [
-      BASE + "Projects/TXC/COVER_PHOTO.webp",
-      BASE + "Projects/TXC/CSG_PFP.png",
-      BASE + "Projects/TXC/TXC_TEASER.png",
-      BASE + "Projects/TXC/TXC.webp"
+      "projects/TXC/COVER_PHOTO.webp",
+      "projects/TXC/CSG_PFP.png",
+      "projects/TXC/TXC_TEASER.png",
+      "projects/TXC/TXC.webp"
     ]
   },
 
@@ -88,10 +87,10 @@ const projects = {
     title: "It Only Gets Better!",
     desc: "Vibrant identity system for Students' Week 2026.",
     images: [
-      BASE + "Projects/XASW/MAIN_POSTER.webp",
-      BASE + "Projects/XASW/FROM_HERE_ON.png",
-      BASE + "Projects/XASW/XASW_FUNRU.png",
-      BASE + "Projects/XASW/XASW_FUNRUN_INFO_2.png"
+      "projects/XASW/MAIN_POSTER.webp",
+      "projects/XASW/FROM_HERE_ON.png",
+      "projects/XASW/XASW_FUNRU.png",
+      "projects/XASW/XASW_FUNRUN_INFO_2.png"
     ]
   },
 
@@ -99,10 +98,10 @@ const projects = {
     title: "XU Festival Days",
     desc: "Energetic branding system capturing festival spirit.",
     images: [
-      BASE + "Projects/XUFD/XUFD.webp",
-      BASE + "Projects/XUFD/CSG_LOGO_PFP.webp",
-      BASE + "Projects/XUFD/BIKE_TARP.png",
-      BASE + "Projects/XUFD/DAYS.png"
+      "projects/XUFD/XUFD.webp",
+      "projects/XUFD/CSG_LOGO_PFP.webp",
+      "projects/XUFD/BIKE_TARP.png",
+      "projects/XUFD/DAYS.png"
     ]
   }
 };
