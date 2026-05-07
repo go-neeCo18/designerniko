@@ -76,10 +76,10 @@ const projects = {
     title: "The Xavier Cup - 2025",
     desc: "Pixel-based branding system for Xavier University Intramurals.",
     images: [
-      "/projects/TXC/COVER PHOTO.webp",
-      "/projects/TXC/CSG PFP.png",
-      "/projects/TXC/TXC TEASER.png",
-      "/projects/TXC/TXC.webp"
+      "/Projects/TXC/COVER PHOTO.webp",
+      "/Projects/TXC/CSG PFP.png",
+      "/Projects/TXC/TXC TEASER.png",
+      "/Projects/TXC/TXC.webp"
     ]
   },
 
@@ -87,10 +87,10 @@ const projects = {
     title: "It Only Gets Better!",
     desc: "Vibrant identity system for Students' Week 2026.",
     images: [
-      "/projects/XASW/MAIN POSTER.webp",
-      "/projects/XASW/FROM HERE ON.png",
-      "/projects/XASW/XASW FUNRU.png",
-      "/projects/XASW/XASW FUNRUN INFO 2.png"
+      "/Projects/XASW/MAIN POSTER.webp",
+      "/Projects/XASW/FROM HERE ON.png",
+      "/Projects/XASW/XASW FUNRU.png",
+      "/Projects/XASW/XASW FUNRUN INFO 2.png"
     ]
   },
 
@@ -98,10 +98,10 @@ const projects = {
     title: "XU Festival Days",
     desc: "Energetic branding system capturing festival spirit.",
     images: [
-      "/projects/XUFD/XUFD.webp",
-      "/projects/XUFD/CSG LOGO PFP.webp",
-      "/projects/XUFD/BIKE TARP.png",
-      "/projects/XUFD/3.png"
+      "/Projects/XUFD/XUFD.webp",
+      "/Projects/XUFD/CSG LOGO PFP.webp",
+      "/Projects/XUFD/BIKE TARP.png",
+      "/Projects/XUFD/3.png"
     ]
   }
 };
