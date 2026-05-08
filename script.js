@@ -1,17 +1,34 @@
 
-    // MOBILE MENU
+    // PAGE TRANSITIONS
 
-    const menuToggle =
-      document.getElementById("menuToggle");
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("page-transition-in");
+});
 
-    const menu =
-      document.getElementById("menu");
+function navigateTo(url) {
+  document.body.classList.add("page-transition-out");
+  setTimeout(() => {
+    window.location.href = url;
+  }, 500);
+}
 
-    menuToggle.addEventListener("click", () => {
+function navigateToProjects(projectId) {
+  navigateTo("projects.html");
+}
 
-      menu.classList.toggle("open");
+// MOBILE MENU
 
-    });
+const menuToggle =
+  document.getElementById("menuToggle");
+
+const menu =
+  document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+
+  menu.classList.toggle("open");
+
+});
 
     // THEME TOGGLE
 
@@ -21,22 +38,26 @@
     const html =
       document.documentElement;
 
+    // Load theme from localStorage on page load
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("theme") || "dark";
+      html.setAttribute("data-theme", savedTheme);
+      themeToggle.textContent = savedTheme === "dark" ? "🌙" : "☀️";
+    }
+
+    // Load theme on page load
+    loadTheme();
+
     themeToggle.addEventListener("click", () => {
 
       const currentTheme =
         html.getAttribute("data-theme");
 
-      if (currentTheme === "dark") {
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-        html.setAttribute("data-theme", "light");
-        themeToggle.textContent = "☀️";
-
-      } else {
-
-        html.setAttribute("data-theme", "dark");
-        themeToggle.textContent = "🌙";
-
-      }
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      themeToggle.textContent = newTheme === "dark" ? "🌙" : "☀️";
 
     });
 
@@ -44,7 +65,7 @@
 
     const revealElements =
       document.querySelectorAll(
-        ".project-card, .hero-panel, .stat, .quote-block"
+        ".project-card, .hero-panel, .stat, .quote-block, .project-detail-card, .studio-card"
       );
 
     const observer =
@@ -107,6 +128,8 @@ const projects = {
 };
 
 function openProject(id) {
+  if (!modal || !modalBody) return;
+  
   const project = projects[id];
 
   modalBody.innerHTML = `
@@ -128,33 +151,55 @@ function openProject(id) {
 }
 
 function closeProject() {
+  if (!modal) return;
   modal.classList.remove("show");
 }
 
 // close when clicking outside
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    closeProject();
-  }
-});
+if (modal) {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeProject();
+    }
+  });
+}
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 function openLightbox(src) {
+  if (!lightbox || !lightboxImg) return;
+  
   lightboxImg.src = src;
   lightbox.classList.add("show");
 }
 
 function closeLightbox() {
+  if (!lightbox || !lightboxImg) return;
+  
   lightbox.classList.remove("show");
   lightboxImg.src = "";
 }
 
 // close when clicking background
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    closeLightbox();
-  }
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+}
+
+// GALLERY BUTTONS EVENT LISTENERS
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryButtons = document.querySelectorAll(".view-gallery");
+  galleryButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const projectId = button.getAttribute("data-project");
+      openProject(projectId);
+    });
+  });
 });
+
 

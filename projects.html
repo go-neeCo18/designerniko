@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects - Niko Go — Graphic Design Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body class="page-transition-in">
+
+  <main class="page">
+
+    <!-- NAV -->
+
+    <header class="topnav">
+
+      <a href="index.html" class="brand">Niko Go</a>
+
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+
+      <nav class="menu" id="menu">
+        <a href="projects.html" class="active">Work</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle">
+        🌙
+      </button>
+
+    </header>
+
+    <!-- PROJECTS HERO -->
+
+    <section class="projects-hero">
+      <div>
+        <h1>Featured Projects</h1>
+        <p class="lead">A selection of recent work showcasing brand identities, event designs, and visual systems.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS GRID -->
+
+    <section class="projects-full">
+
+      <div class="projects-grid">
+
+        <!-- Xavier Cup -->
+        <article class="project-detail-card" data-project="xavier">
+
+          <div class="project-detail-image">
+            <img src="IMGs/COVER_PHOTO.webp" alt="The Xavier Cup - 2025" />
+          </div>
+
+          <div class="project-detail-content">
+            <span class="project-number">01</span>
+
+            <h2>The Xavier Cup - 2025</h2>
+
+            <p class="lead">
+              A visual identity for Xavier University's annual Intramurals that uses 8-bits aesthetics, pixel art, and a
+              bold color palette to create a fun and energetic brand system. This project showcases creative problem-solving
+              and attention to detail in visual branding.
+            </p>
+
+            <div class="project-tags">
+              <span>Event Branding</span>
+              <span>Pixel Art</span>
+              <span>Visual Identity</span>
+            </div>
+
+            <button class="btn primary view-gallery" data-project="xavier">View Gallery</button>
+
+          </div>
+
+        </article>
+
+        <!-- Students Week -->
+        <article class="project-detail-card" data-project="studentweek">
+
+          <div class="project-detail-image">
+            <img src="IMGs/MAIN_POSTER.webp" alt="It Only Gets Better!" />
+          </div>
+
+          <div class="project-detail-content">
+            <span class="project-number">02</span>
+
+            <h2>It Only Gets Better!</h2>
+
+            <p class="lead">
+              Playful brand identity for Xavier University's Students'Week 2026, featuring a vibrant color palette and
+              dynamic typography to create an energetic and inclusive visual system. This project demonstrates versatility
+              in creating cohesive branding across multiple touchpoints.
+            </p>
+
+            <div class="project-tags">
+              <span>Brand Design</span>
+              <span>Event Branding</span>
+              <span>Typography</span>
+            </div>
+
+            <button class="btn primary view-gallery" data-project="studentweek">View Gallery</button>
+
+          </div>
+
+        </article>
+
+        <!-- Festival Days -->
+        <article class="project-detail-card" data-project="festival">
+
+          <div class="project-detail-image">
+            <img src="IMGs/XUFD.webp" alt="XU Festival Days" />
+          </div>
+
+          <div class="project-detail-content">
+            <span class="project-number">03</span>
+
+            <h2>XU Festival Days</h2>
+
+            <p class="lead">
+              A branding design for Xavier University's Festival Days, using a vibrant color palette to create an
+              energetic and inclusive visual system that captures the spirit of the event. This comprehensive brand system
+              includes posters, merchandise designs, and digital assets.
+            </p>
+
+            <div class="project-tags">
+              <span>Event Branding</span>
+              <span>Major Project</span>
+              <span>Comprehensive System</span>
+            </div>
+
+            <button class="btn primary view-gallery" data-project="festival">View Gallery</button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+      <div class="footer-content">
+
+        <section class="footer-section">
+
+          <h3>
+            Let's build something memorable.
+          </h3>
+
+          <p>
+            Available for freelance projects,
+            creative collaborations, and visual design work.
+          </p>
+
+          <a href="mailto:designernikogo@gmail.com" class="btn primary">
+            Get in touch
+          </a>
+
+        </section>
+
+        <section class="footer-section">
+
+          <ul class="footer-links">
+            <li><a href="projects.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        </section>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Niko Go</p>
+        <p>Designed & Developed by Niko Go</p>
+      </div>
+
+    </footer>
+
+    <!-- GALLERY MODAL -->
+
+    <div class="modal" id="modal">
+
+      <div class="modal-content">
+
+        <button class="close" onclick="closeProject()">✕</button>
+
+        <div id="modal-body"></div>
+
+      </div>
+
+    </div>
+
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+      <img id="lightbox-img" src="" alt="Full view">
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

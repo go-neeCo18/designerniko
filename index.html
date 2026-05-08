@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body class="page-transition-in">
 
   <main class="page">
 
@@ -30,8 +30,8 @@
       </button>
 
       <nav class="menu" id="menu">
-        <a class="active" href="#projects">Work</a>
-        <a href="#about">About</a>
+        <a class="active" href="projects.html">Work</a>
+        <a href="about.html">About</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -62,11 +62,11 @@
         </p>
 
         <div class="actions">
-          <a href="#projects" class="btn primary">
+          <a href="projects.html" class="btn primary">
             View work
           </a>
 
-          <a href="#about" class="btn secondary">
+          <a href="about.html" class="btn secondary">
             About me
           </a>
         </div>
@@ -181,7 +181,7 @@
 
       <div class="project-list">
 
-        <article class="project-card" onclick="openProject('xavier')">
+        <article class="project-card" onclick="navigateToProjects('xavier')">
 
           <span class="project-number">
             01
@@ -203,7 +203,7 @@
 
         </article>
 
-        <article class="project-card" onclick="openProject('studentweek')">
+        <article class="project-card" onclick="navigateToProjects('studentweek')">
 
           <span class="project-number">
             02
@@ -225,7 +225,7 @@
 
         </article>
 
-        <article class="project-card" onclick="openProject('festival')">
+        <article class="project-card" onclick="navigateToProjects('festival')">
 
           <span class="project-number">
             03
@@ -277,8 +277,8 @@
         <section class="footer-section">
 
           <ul class="footer-links">
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="projects.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
 

@@ -86,23 +86,6 @@ body {
         var(--bg);
 }
 
-/* NOISE TEXTURE */
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-
-    background-image:
-        radial-gradient(rgba(255, 255, 255, 0.03) 1px,
-            transparent 1px);
-
-    background-size: 22px 22px;
-
-    opacity: 0.4;
-    pointer-events: none;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -146,6 +129,8 @@ a {
     border-radius: 999px;
 
     transition: 0.4s ease;
+
+    box-shadow: #070b145a 0px 5px 10px -5px;
 }
 
 .brand {
@@ -593,7 +578,7 @@ h1 {
 
 .project-card:hover {
     transform: translateY(-8px);
-
+    box-shadow: #070b145a 0px 20px 40px -10px;
     border-color: var(--card-border-2);
 }
 
@@ -925,6 +910,202 @@ footer {
 }
 
 /* =========================
+   PAGE TRANSITIONS
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+body.page-transition-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+body.page-transition-out {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+
+/* =========================
+   ABOUT SECTION PAGE
+========================= */
+
+.about-section {
+    display: grid;
+    gap: 6rem;
+}
+
+.studio-section {
+    display: grid;
+    gap: 2rem;
+}
+
+.studio-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.03em;
+}
+
+.studio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.studio-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: var(--card-blur);
+    border-radius: 24px;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.studio-card h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.studio-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================
+   PROJECTS FULL PAGE
+========================= */
+
+.projects-hero {
+    margin: 4rem 0 3rem;
+}
+
+.projects-hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.projects-full {
+    display: grid;
+    gap: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.project-detail-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: var(--card-blur);
+    border-radius: 24px;
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+
+    animation: fadeIn 0.6s ease-out;
+}
+
+.project-detail-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--card-border-2);
+}
+
+.project-detail-image {
+    overflow: hidden;
+    border-radius: 24px;
+    height: 100%;
+}
+
+.project-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-detail-card:hover .project-detail-image img {
+    transform: scale(1.05);
+}
+
+.project-detail-content {
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.project-detail-content h2 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.project-detail-content .project-number {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.project-detail-content .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.project-detail-content .project-tags span {
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(124, 156, 255, 0.1);
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+.view-gallery {
+    width: fit-content;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: var(--card-blur);
+    border-radius: 24px;
+    padding: 2rem;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -940,6 +1121,18 @@ footer {
 
     .project-list {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-detail-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-detail-image {
+        height: 300px;
+    }
+
+    .studio-grid {
+        grid-template-columns: 1fr;
     }
 }
 
