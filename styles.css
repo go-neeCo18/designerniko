@@ -179,6 +179,11 @@ a {
     width: calc(100% - 2rem);
 }
 
+.menu a.active{
+    background: var(--card-bg);
+    color: var(--accent);
+}
+
 .theme-toggle,
 .menu-toggle {
     width: 42px;
@@ -792,10 +797,10 @@ footer {
     backdrop-filter: var(--card-blur);
 
     padding: 2rem;
-
+    
+    height: auto;
     border-radius: 24px;
-
-    max-width: 600px;
+    max-width: 90%;
     width: 100%;
 }
 
@@ -822,12 +827,14 @@ footer {
 }
 
 .modal-header h2 {
+    font-size: 3rem;
     margin: 0 0 0.5rem;
 }
 
 .modal-header p {
     color: white;
     line-height: 1.6;
+    width: 80%;
 }
 
 /* =========================
@@ -836,7 +843,7 @@ footer {
 
 .modal-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, auto);
     gap: 1rem;
 }
 
@@ -847,6 +854,8 @@ footer {
     border: 1px solid var(--border);
 
     transition: transform 0.3s ease;
+
+    cursor: pointer;
 }
 
 .modal-item img {
@@ -998,10 +1007,17 @@ body.page-transition-out {
 }
 
 .projects-hero h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(6rem, 6vw, 4.5rem);
     letter-spacing: -0.05em;
     font-weight: 800;
     margin-bottom: 1rem;
+}
+
+.projects-hero p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 45ch;
 }
 
 .projects-full {
@@ -1017,7 +1033,7 @@ body.page-transition-out {
 
 .project-detail-card {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
 

@@ -95,7 +95,7 @@ const modalBody = document.getElementById("modal-body");
 const projects = {
   xavier: {
     title: "The Xavier Cup - 2025",
-    desc: "Pixel-based branding system for Xavier University Intramurals.",
+    desc: "A visual identity for Xavier University's annual Intramurals that uses 8-bits aesthetics, pixel art, and a bold color palette to create a fun and energetic brand system. This project showcases creative problem-solving and attention to detail in visual branding.",
     images: [
       "./IMGs/COVER_PHOTO.webp",
       "./IMGs/CSG_PFP.png",
